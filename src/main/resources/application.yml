@@ -1,0 +1,26 @@
+#server:
+#  port: 8888
+spring:
+
+# Enable next two lines for file access
+  #profiles:
+  #  active: native
+  cloud:
+    config:
+      server:
+# Enable next three lines for git access
+        git:
+          uri: http://gogs:3000/anon/config
+          username: anon
+          password: anon
+# Enable next two lines for file access
+#         native:
+#          searchLocations: classpath:config/,classpath:config/bitcoindAdapter,classpath:config/txMemPool,classpath:config/mempoolRecorder
+
+#for file access create folder in src/main/resources/config/bitcoindAdapter/..configfiles as bitcoindAdapter-dev.yml..
+#for file access create folder in src/main/resources/config/txMemPool/..configfiles as txMemPool-dev.yml..
+#for file access create folder in src/main/resources/config/mempoolRecorder/..configfiles as mempoolRecorder-dev.yml..
+
+  application:
+    name: configurationServer
+          
